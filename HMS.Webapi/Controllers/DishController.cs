@@ -14,7 +14,7 @@ namespace HMS.Webapi.Controllers
     {
 
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<DishController> _logger;
 
         public DishController(IMapper mapper):base(mapper)
         {
@@ -29,12 +29,6 @@ namespace HMS.Webapi.Controllers
             dishList.Add(new Dish { Name = "Name2" });
             dishList.Add(new Dish { Name = "Name3" });
             return Ok(dishList);
-        }
-
-        [HttpGet("id")]
-        public IActionResult Get(int id)
-        {
-            return Ok(new Dish { Name = "Name1" });
         }
     }
 }
